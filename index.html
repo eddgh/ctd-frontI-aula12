@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Formulário 2/2</title>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1 class="conteudo__titulo">Pesquisa de opinião</h1>
+        <form 
+            class="formulario" 
+            method="get" 
+            action="https://api.sistema.com/cadastrar"
+        >
+            <fieldset class="formulario__sessao">
+                <legend class="formulario__legenda">1/2 Informações pessoais</legend>
+                <div class="formulario__grupo">
+                    <label class="formulario__rotulo" for="nome">Nome</label>
+                    <input 
+                        class="formulario__campo" 
+                        type="text"
+                        id="nome" 
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                    >
+                </div>
+                <div class="formulario__grupo">
+                    <label class="formulario__rotulo" for="email">E-mail</label>
+                    <input 
+                        class="formulario__campo" 
+                        type="email"
+                        id="email" 
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                    >
+                </div>
+            </fieldset>
+            <fieldset class="formulario__sessao">
+                <legend class="formulario__legenda">2/2 Pesquisa de opinião</legend>
+                <!-- Campo do tipo Radio -->
+                <div class="formulario__grupo">
+                    <h1 class="formulario__enunciado">Você acredita que seu time tem chances de vencer o Brasileirão Série A 2022?</h1>
+                    <div>
+                        <input 
+                            type="radio"
+                            id="sim" 
+                            name="confiante" 
+                            value="sim" 
+                        >
+                        <label class="formulario__rotulo" for="sim">Sim</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="radio" 
+                            id="nao"
+                            name="confiante" 
+                            value="nao" 
+                        >
+                        <label class="formulario__rotulo" for="nao">Não</label>
+                    </div>
+                </div>
+                <!-- Campo do tipo Select -->
+                <div class="formulario__grupo">
+                    <h1 class="formulario__enunciado">Para qual time você torce?</h1>
+                    <select 
+                        name="select"
+                    >
+                        <option selected disabled>Escolha um time</option>
+                        <optgroup label="Carioca">
+                            <option value="flamengo">Flamengo</option>
+                            <option value="vasco">Vasco</option>
+                        </optgroup>
+                        <optgroup label="Paulista">
+                            <option value="corinthians">Corinthians</option>
+                            <option value="palmeiras">Palmeiras</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <!-- Campo do tipo Checkbox -->
+                <div>
+                    <h1 class="formulario__enunciado">Marque as afirmações que definem o tipo de torcedor que você considera ser.</h1>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="tv"
+                            name="audiencia" 
+                            value="tv" 
+                        >
+                        <label class="formulario__rotulo" for="tv">Assisto prefiro assistir os jogos na TV.</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox"
+                            id="eventualmente-presencial" 
+                            name="audiencia" 
+                            value="eventualmente-presencial" 
+                        >
+                        <label class="formulario__rotulo" for="eventualmente-presencial">Assisto prefiro assistir as partidas na TV, mas vou eventualmente assistir presencialmente.</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox"
+                            id="bares" 
+                            name="audiencia" 
+                            value="bares" 
+                        >
+                        <label class="formulario__rotulo" for="bares">Assisto prefiro assistir as partidas na TV, mas vou eventualmente assistir em bares.</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox"
+                            id="presencial" 
+                            name="audiencia" 
+                            value="presencial" 
+                        >
+                        <label class="formulario__rotulo" for="presencial">Prefiro assistir as partidas presencialmente.</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="formulario__grupo">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
