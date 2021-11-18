@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,111 @@
     <title>Mesa de trabalho</title>
     <style type="text/css">
         /* Adicione o código fonte de estilização */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .conteudo {
+            width: 480px;
+            margin: 50px auto;
+            border: 2px solid;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        .formulario__localizacao {
+
+            display: block;
+            margin: 10px;
+        }
+
+
+
+        input {
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 10px;
+            border: 4px solid rgb(197, 194, 194);
+            border-radius: 4px;
+            outline: none;
+            margin-bottom: 8px;
+            background: none;
+        }
+
+        hr {
+            height: 1px blur:5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        p{
+            font-weight: bold;
+        }
 
     </style>
 </head>
-<body>
-    <!-- Adicione o código fonte da estrutura HTML -->
 
+<body>
+
+    <div class="conteudo">
+        <!-- Adicione o código fonte da estrutura HTML -->
+
+        <div class="formulario__localizacao">
+            <form class="formulario" method="get" action="https://api.sistema.com/formulario">
+
+                <label class="formulario__localizacao" for="localizacao">Localização</label>
+                <input class="formulario__localizacao" type="text" id="localizacao" name="localizacao"
+                    placeholder="Digite seu estado ou cidade">
+        </div>
+        <hr>
+        <div class="formulario__ofertas">
+            <p>Ofertas</p> <br>
+            <input type="checkbox" id="ofertas" name="ofertas" value="Black Feirao">
+            <label class="formulario__ofertas" for="ofertas">Black Feirão</label>
+        </div>
+
+        <hr>
+        <div class="formulario__interessante">
+            <p><strong> O que é interessante pra você? </strong></p> <br>
+            <div>
+                <input type="checkbox" id="interessante" name="interessante" value="Super Preco">
+                <label class="formulario__ofertas" for="ofertas">Super Preço <br></label>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="interessante" name="interessante" value="Car Delivery">
+                <label class="formulario__ofertas" for="ofertas">Car Delivery <br></label>
+            </div>
+            <br>
+            <input type="checkbox" id="interessante" name="interessante" value="Trocatroco">
+            <label class="formulario__ofertas" for="ofertas">Troca + Troco <br></label>
+
+
+        </div>
+        <hr>
+        <div class="formulario__carros">
+            <p>Carros</p>
+            <input type="checkbox" id="novos" name="novos" value="novos">
+            <label class="formulario__carros" for="novos">Novos</label>
+            <input type="checkbox" id="usados" name="usados" value="usados">
+            <label class="formulario__carros" for="usados">Usados</label>
+        </div>
+
+        <hr>
+        <div class="formulario__ano"></div>
+        <p>Ano</p>
+<input type="number" min="2010" max="2022" id="ano" name="ano" placeholder="de">
+<input type="number" min="2010" max="2022" id="ano" name="ano" placeholder="até">
+
+</div>
+
+<hr>
+        </form>
+
+
+    </div>
+    </div>
 </body>
+
 </html>
